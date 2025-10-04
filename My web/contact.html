@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Roel Acido</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+</head>
+<body>
+  <header>
+    <h2 class="logo">Roel Acido</h2>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <nav id="side-menu">
+    <span class="close-btn" onclick="toggleMenu()">✖</span>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="mobile-app.html">Mobile App</a>
+    <a href="web-tools.html">Web Tools</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="contact-form">
+    <h1>Contact Me</h1>
+    <!-- 🔥 This will open the email app with your address -->
+    <form action="mailto:acidorj24@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Roel Acido | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
