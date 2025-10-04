@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Roel Acido</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h2 class="logo">Roel Acido</h2>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <nav id="side-menu">
+    <span class="close-btn" onclick="toggleMenu()">✖</span>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="mobile-app.html">Mobile App</a>
+    <a href="web-tools.html">Web Tools</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="home-hero">
+  <div class="hero-content">
+    <h1>Our Projects</h1>
+    <p>Explore our latest projects and contributions.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Roel Acido. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("side-menu").classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
