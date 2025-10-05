@@ -142,7 +142,12 @@ header h2 {
   animation: zoomIn 1s ease forwards;
 }
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  animation: slideUp 1s ease forwards;
+}
+.hero-content h2 {
+  font-size: 1rem;
   margin-bottom: 20px;
   animation: slideUp 1s ease forwards;
 }
