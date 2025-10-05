@@ -15,7 +15,7 @@ body {
 /* Header */
 header {
   background: #14213d;
-  padding: 11px 25px;
+  padding: 11px 17px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,20 +36,45 @@ header h2 {
   animation: fadeIn 2s ease forwards;
 }
 
-/* Hamburger icon */
-.menu-toggle {
+.menu-toggle,
+#side-menu .close-btn {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  overflow: visible;
   font-size: 1.5rem;
-  cursor: pointer;
   color: white;
-  display: block;
   z-index: 1001;
+}
+
+.menu-toggle:active::after,
+#side-menu .close-btn:active::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  animation: flash 0.25s ease-out;
+}
+
+@keyframes flash {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 /* Sidebar Menu */
 #side-menu {
   position: fixed;
   top: 0;
-  left: -260px; /* hidden */
+  left: -260px;
   width: 250px;
   height: 100%;
   background: #14213d;
@@ -74,21 +99,21 @@ header h2 {
   color: #fca311;
 }
 
+/* Close button position (unchanged) */
 #side-menu .close-btn {
   position: absolute;
   top: 20px;
   right: 20px;
   font-size: 1.2rem;
-  cursor: pointer;
   color: white;
 }
 
-/* Sidebar header with logo + X */
+/* Sidebar header */
 .sidebar-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #14213d; /* slightly darker header tone */
+  background: #14213d;
   padding: 16px 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -99,7 +124,6 @@ header h2 {
   font-size: 2em;
   font-weight: 600;
   margin: 0;
-  
 }
 
 /* Active sidebar */
@@ -130,13 +154,14 @@ header h2 {
   100% { transform: scale(1); }
 }
 
+/* Hero */
 .home-hero {
   height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #0d1b2a; /* solid dark blue background */
+  background: #0d1b2a;
 }
 .hero-content {
   animation: zoomIn 1s ease forwards;
@@ -167,7 +192,9 @@ header h2 {
   transition: 0.3s;
   animation: bounceIn 1.5s ease forwards;
 }
-.btn-primary:hover { background: #ffb703; }
+.btn-primary:hover {
+  background: #ffb703;
+}
 
 /* About */
 .about-section {
@@ -181,9 +208,9 @@ header h2 {
   color: #fca311;
   animation: fadeIn 1.5s ease forwards;
 }
-.about-text p { 
-  max-width: 700px; 
-  margin: auto; 
+.about-text p {
+  max-width: 700px;
+  margin: auto;
   animation: slideUp 1.8s ease forwards;
 }
 
@@ -200,7 +227,7 @@ header h2 {
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 .card {
@@ -211,8 +238,8 @@ header h2 {
   animation: zoomIn 1s ease forwards;
 }
 .card:hover { background: #2d3a59; }
-.card h3 { 
-  margin-bottom: 10px; 
+.card h3 {
+  margin-bottom: 10px;
   animation: slideUp 1.2s ease forwards;
 }
 
@@ -244,7 +271,6 @@ header h2 {
 }
 .contact-form button {
   margin-top: 15px;
-  cursor: pointer;
   background: #fca311;
   padding: 12px;
   border: none;
@@ -262,60 +288,46 @@ footer {
   margin-top: 50px;
   animation: fadeIn 2s ease forwards;
 }
-    body {
-      background: #0d1b2a;
-      color: white;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #0d1b2a;
-      color: #aaa;
-    }
+/* Follow Us Section */
+.follow {
+  text-align: center;
+  margin-top: 50px;
+}
 
-    /* Follow Us Section */
-    .follow {
-      text-align: center;
-      margin-top: 50px;
-    }
+.follow h2 {
+  font-size: 1.5em;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
 
-    .follow h2 {
-      font-size: 1.5em;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-    }
+.follow h2 i {
+  color: #1e90ff;
+}
 
-    .follow h2 i {
-      color: #1e90ff;
-    }
+.social-links {
+  margin-top: 20px;
+}
 
-    .social-links {
-      margin-top: 20px;
-    }
+.social-links a {
+  display: inline-block;
+  background: #233145;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 25px;
+  margin: 0 0px;
+  transition: 0.3s;
+}
 
-    .social-links a {
-      display: inline-block;
-      background: #233145;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      line-height: 60px;
-      text-align: center;
-      font-size: 25px;
-      margin: 0 0px;
-      transition: 0.3s;
-    }
-
-    .social-links a:hover {
-      background: #1877f2;
-      color: #fff;
-      transform: scale(1.1);
-    }
+.social-links a:hover {
+  background: #1877f2;
+  color: #fff;
+  transform: scale(1.1);
+}
